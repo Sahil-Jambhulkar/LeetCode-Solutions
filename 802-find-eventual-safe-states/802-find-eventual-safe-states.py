@@ -11,8 +11,7 @@ class Solution:
             for nei in graph[node]:
                 if nei not in visited:
                     if (dfs(nei,visited,incycle)):
-                        
-                        incycle.add(node)
+                        incycle.add(node)       #here dfs will continue and last node of that cycle is added first (similar to last node in remove in dfsvisited and  also similar to last node is inserted first to stack in toposort)
                         return True
                  
                 elif nei in dfsvisited:
