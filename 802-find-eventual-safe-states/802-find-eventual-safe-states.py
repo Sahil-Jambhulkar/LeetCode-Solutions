@@ -26,7 +26,6 @@ class Solution:
             if i not in visited:
                 dfs(i,visited,incycle)
                
-        
         ans=[]
         print(incycle)
         
