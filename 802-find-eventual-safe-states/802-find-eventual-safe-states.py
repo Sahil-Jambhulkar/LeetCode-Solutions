@@ -11,10 +11,12 @@ class Solution:
             for nei in graph[node]:
                 if nei not in visited:
                     if (dfs(nei,visited,incycle)):
+                        
                         incycle.add(node)
                         return True
                  
                 elif nei in dfsvisited:
+                    
                     incycle.add(node)
                     return True
                
