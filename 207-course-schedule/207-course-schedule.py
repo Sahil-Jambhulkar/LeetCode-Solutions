@@ -7,7 +7,6 @@ class Solution:
         for c,p in prerequisites:
             adjList[c].append(p)
         
-        
         def dfs(i):
             visited.add(i)
             dfsvisited.add(i)
@@ -16,12 +15,9 @@ class Solution:
                 if nei not in visited:
                     if(dfs(nei)):
                         return True
-                   
                 elif nei in dfsvisited:
                     return True
-            
             dfsvisited.remove(i)
-        
         visited=set()
         dfsvisited=set()
         
@@ -29,7 +25,6 @@ class Solution:
             if i not in visited:
                 if(dfs(i)):
                     return False
-               
            
         return True
             
