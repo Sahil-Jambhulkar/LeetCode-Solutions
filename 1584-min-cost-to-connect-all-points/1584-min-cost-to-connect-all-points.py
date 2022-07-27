@@ -33,7 +33,6 @@ class Solution:
             visited.add(node)
             
             for dist,nei in adjList[node]:
-                if nei not in visited:
                     heapq.heappush(minheap,[dist,nei])
                     
                 
