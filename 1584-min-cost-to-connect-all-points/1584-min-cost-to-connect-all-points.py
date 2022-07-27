@@ -17,26 +17,26 @@ class Solution:
                 adjList[j].append([distance,i])
                
            
-        minheap=[[0,0]]  
+        minheap=[]
+        heapq.heapify(minheap)
+        
+        minheap.append([0,0])
+        
         visited=set()
         res=0
         
         while(len(visited)!=len(points)):
             distance,node=heapq.heappop(minheap)
-            
+
             if node in visited:
                 continue
-                
             visited.add(node)
             res+=distance
             
-            
             for distance,nei in adjList[node]:
                 if nei not in visited:
-                    print('asdasd')
                     heapq.heappush(minheap,[distance,nei])
 
-                    
             
         return res 
             
