@@ -8,9 +8,8 @@ class Solution:
             if(node==len(graph)-1):
                 ans.append(res[:])
             
-            else:
-                for nei in graph[node]:
-                        dfs(nei)
+            for nei in graph[node]:
+                    dfs(nei)
             
             res.remove(node) 
         
