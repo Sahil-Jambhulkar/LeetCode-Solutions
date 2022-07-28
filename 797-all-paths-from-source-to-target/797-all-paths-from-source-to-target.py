@@ -15,8 +15,6 @@ class Solution:
         
         res=[]
         ans=[]
-        
-      
         dfs(0)
             
         return ans
