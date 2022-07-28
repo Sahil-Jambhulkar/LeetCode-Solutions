@@ -9,7 +9,7 @@ class Solution:
                 ans.append(res[:])
             
             for nei in graph[node]:
-                    dfs(nei)
+                dfs(nei)
             
             res.remove(node) 
         
