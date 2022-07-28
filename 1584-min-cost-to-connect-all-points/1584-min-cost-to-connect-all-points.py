@@ -8,43 +8,41 @@ class Solution:
         
         for i in range(len(points)):
             x1,y1=points[i]
-            for j in range(i+1,len(points)):
+            
+            for j in range(len(points)):
                 x2,y2=points[j]
                 distance=abs(x1-x2)+abs(y1-y2)
                 adjList[i].append([distance,j])
                 adjList[j].append([distance,i])
                 
+            
+        q=[[0,0]]
         
+        heapq.heapify(q)
         visited=set()
-        minheap=[]
-        heapq.heapify(minheap)
-        
-        minheap.append([0,0])
-        
         res=0
+        
         while(len(visited)!=len(points)):
             
-            distance,node=heapq.heappop(minheap)
+            dist,node=heapq.heappop(q)
             
             if node in visited:
                 continue
                
-            res+=distance
+            res+=dist
             visited.add(node)
             
-            for dist,nei in adjList[node]:
+            for diss,nei in adjList[node]:
                 if nei not in visited:
-                    heapq.heappush(minheap,[dist,nei])
-                    
-                
+                    heapq.heappush(q,[diss,nei])
+                   
+        
         return res
+                    
+               
             
-            
-        
-        
-        
-        
-        
+
+          
         
         
        
