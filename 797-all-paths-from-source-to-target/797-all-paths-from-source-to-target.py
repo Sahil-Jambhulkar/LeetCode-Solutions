@@ -7,15 +7,15 @@ class Solution:
             res.append(node)
             if(node==len(graph)-1):
                 ans.append(res[:])
-            
-            for nei in graph[node]:
-                dfs(nei)
+             
+            else:
+                for nei in graph[node]:
+                    dfs(nei)
             
             res.remove(node) 
         
         res=[]
         ans=[]
         dfs(0)
-            
         return ans
         
