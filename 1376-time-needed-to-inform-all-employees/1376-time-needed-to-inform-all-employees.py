@@ -1,9 +1,7 @@
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         
-        
-        if n==1:
-            return 0
+       
         
         adjList=defaultdict(list) 
         for ind,val in enumerate(manager):
