@@ -18,7 +18,7 @@ class Solution:
         
         
         def dfs(r,c):
-            grid[r][c]='T'
+            grid[r][c]=1
             
             directions=[[1,0],[-1,0],[0,1],[0,-1]]
             
