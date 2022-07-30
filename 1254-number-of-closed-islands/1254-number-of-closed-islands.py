@@ -4,8 +4,6 @@ class Solution:
         rows=len(grid)
         cols=len(grid[0])
         
-        
-        
         def noisland(r,c):
             visited.add((r,c))
             
@@ -47,7 +45,6 @@ class Solution:
                 dfs(rows-1,c)      
         
            
-        print(grid)
         count=0
         visited=set()
         for r in range(rows):
@@ -55,8 +52,6 @@ class Solution:
                 if grid[r][c]==0 and (r,c) not in visited:
                     noisland(r,c)
                     count+=1
-                   
-               
            
         return count
                    
