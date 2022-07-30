@@ -1,57 +1,37 @@
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         
-       
-        
-        adjList=defaultdict(list) 
-        for ind,val in enumerate(manager):
-            if(val!=-1):
-                adjList[val].append(ind)
-         
+        adjList=defaultdict(list)
         
         
-        minheap=[[informTime[headID],headID]]
-        
-        heapq.heapify(minheap)
-        visited=set()
-        
+        for idx,val in enumerate(manager):
+            if val!=-1:
+                adjList[val].append(idx)
+               
+           
+        q=collections.deque()
+        q.append([headID,informTime[headID]])
         
         res=0
         
-        while(len(visited)!=n and minheap):
+        while(q):
             
-            dist,node=heapq.heappop(minheap)
-            
-            if node in visited:
-                continue
-               
-            visited.add(node)
-            res=max(res,dist)
-            
-            for nei in adjList[node]:
-                if nei not in visited:
-                    heapq.heappush(minheap,[informTime[nei]+dist,nei])
+            for i in range(len(q)):
+                node,ift=q.popleft()
+                res=max(res,ift)
+                
+                for nei in adjList[node]:
+                    q.append([nei,ift+informTime[nei]])
                    
-         
-        
-        if (len(visited)==n):
-            return res
-                    
-        return -1   
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+               
+           
+        return res
+                
+                
+                
+                
+                
             
             
         
-        
-            
-        
-       
+      
