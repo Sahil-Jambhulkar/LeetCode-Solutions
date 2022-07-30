@@ -15,7 +15,7 @@ class Solution:
         
         q=collections.deque()
         
-        q.append([headID,0])
+        q.append([headID,informTime[headID]])
         
         time=0
         
@@ -23,12 +23,10 @@ class Solution:
             
             for i in range(len(q)):
                 node,ift=q.popleft()
-                
-                
                 time = max(time,ift)
                
                 for nei in adjList[node]:
-                    q.append([nei,informTime[node]+ift])
+                    q.append([nei,informTime[nei]+ift])
             
             
         
