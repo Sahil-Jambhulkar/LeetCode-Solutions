@@ -9,40 +9,51 @@ class Solution:
         for ind,val in enumerate(manager):
             if(val!=-1):
                 adjList[val].append(ind)
-           
-        print(adjList)
+         
         
         
-        q=collections.deque()
+        minheap=[[informTime[headID],headID]]
         
-        q.append([headID,informTime[headID]])
+        heapq.heapify(minheap)
+        visited=set()
+        
         
         res=0
         
-        while(q):
+        while(len(visited)!=n and minheap):
             
-            for i in range(len(q)):
-                node,ift=q.popleft()
-                res = max(res,ift)
+            dist,node=heapq.heappop(minheap)
+            
+            if node in visited:
+                continue
                
-                for nei in adjList[node]:
-                    q.append([nei,informTime[nei]+ift])
+            visited.add(node)
+            res=max(res,dist)
+            
+            for nei in adjList[node]:
+                if nei not in visited:
+                    heapq.heappush(minheap,[informTime[nei]+dist,nei])
+                   
+         
+        
+        if (len(visited)==n):
+            return res
+                    
+        return -1   
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
         
-        return res
-            
-        
-        
-        
-        
-        
         
             
         
-        
-        
-        
-        
-        
-        
+       
