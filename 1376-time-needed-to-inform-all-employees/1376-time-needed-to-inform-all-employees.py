@@ -17,20 +17,20 @@ class Solution:
         
         q.append([headID,informTime[headID]])
         
-        time=0
+        res=0
         
         while(q):
             
             for i in range(len(q)):
                 node,ift=q.popleft()
-                time = max(time,ift)
+                res = max(res,ift)
                
                 for nei in adjList[node]:
                     q.append([nei,informTime[nei]+ift])
             
             
         
-        return time
+        return res
             
         
         
