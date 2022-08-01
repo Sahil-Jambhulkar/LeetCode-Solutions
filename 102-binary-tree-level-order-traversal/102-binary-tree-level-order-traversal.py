@@ -10,17 +10,13 @@ class Solution:
         res=[]
         if not root:
             return res
-            
-        
         
         q=collections.deque()
-        
         q.append(root)
         
-        
         while(q):
-            level=[]
             
+            level=[]
             for i in range(len(q)):
                 root=q.popleft()
                 level.append(root.val)
@@ -32,7 +28,6 @@ class Solution:
                     q.append(root.right)
                                         
             res.append(level)
-           
        
         return res
                 
