@@ -12,10 +12,25 @@ class Solution:
         if not root:
             return []
         
-        leftValues=self.preorderTraversal(root.left)
-        rightValues=self.preorderTraversal(root.right)
+        stack=[]
         
-        return [root.val,*leftValues,*rightValues]
+        stack.append(root)
+        
+        res=[]
+        
+        
+        while(stack):
+            node=stack.pop()
+            res.append(node.val)
+            
+            if node.right:
+                stack.append(node.right)
+                
+            if node.left:
+                stack.append(node.left)
+               
+        
+        return res
         
         
         
