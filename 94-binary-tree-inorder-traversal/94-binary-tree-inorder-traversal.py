@@ -10,5 +10,8 @@ class Solution:
         if not root:
             return []
         
-        return [*self.inorderTraversal(root.left),root.val,*self.inorderTraversal(root.right)]
+        leftvalues=self.inorderTraversal(root.left)
+        rightvalues=self.inorderTraversal(root.right)
+        
+        return [*leftvalues,root.val,*rightvalues]
         
