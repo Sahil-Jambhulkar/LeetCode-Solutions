@@ -10,9 +10,9 @@ class Solution:
         if not root:
             return []
         
-        leftValues=self.postorderTraversal(root.left)
-        rightValues=self.postorderTraversal(root.right)
+        leftvalues=self.postorderTraversal(root.left)
+        rightvalues=self.postorderTraversal(root.right)
         
         
-        return [*leftValues,*rightValues,root.val]
+        return [*leftvalues,*rightvalues,root.val]
         
