@@ -10,17 +10,13 @@ class Solution:
         
         
         def inorder(root):
-            
             if not root:
-                return [100000]
-            
+                return ['A']
             return [*inorder(root.left),root.val,*inorder(root.right)]
             
         def preorder(root):
-            
             if not root:
-                return [100000]
-            
+                return ['A']
             return [root.val,*preorder(root.left),*preorder(root.right)]
         
         res1=inorder(p)
