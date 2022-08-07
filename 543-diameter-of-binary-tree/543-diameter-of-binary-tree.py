@@ -10,7 +10,6 @@ class Solution:
         self.res=0
         
         def height(root):
-            print('asdasd')
 
             if not root:
                 return 0
@@ -22,7 +21,6 @@ class Solution:
             return 1+max(lh,rh)
             
         height(root)
-        
         return self.res-1
         
   
