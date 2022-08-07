@@ -7,13 +7,14 @@
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
         
+        
+        #diamter(no of node)=1+heightofleftTree+heightofRightTree
         self.res=0
         
         def height(root):
 
             if not root:
                 return 0
-            
             lh=height(root.left)
             rh=height(root.right)
             
