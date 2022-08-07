@@ -16,17 +16,17 @@ class Solution:
         
         while(q):
             
-            level=[]
+            
             for i in range(len(q)):
                 node=q.popleft()
-                level.append(node.val)
+                level=(node.val)
                 
                 if node.left:
                     q.append(node.left)
                 if node.right:
                     q.append(node.right)
                 
-            res.append(level[-1])
+            res.append(level)
         
         return res
         
