@@ -9,6 +9,7 @@ class Solution:
         
         
         def mirror(p,q):
+            
             if not p and not q:
                 return True
             if not p or not q:
@@ -16,6 +17,9 @@ class Solution:
             
             if p.val==q.val and mirror(p.left,q.right) and mirror(p.right,q.left):
                 return True
+           
         
         return mirror(root,root)
+            
+        
         
