@@ -40,11 +40,9 @@ class Solution:
                 if i+1<len(level):
                     level[i].next=level[i+1]
                    
-                
-               
         return root
                 
-                
+        #please ny default all next pointers are set to null tehrefore no need forlast one to set    
                 
                 
             
