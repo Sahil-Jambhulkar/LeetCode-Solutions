@@ -15,8 +15,7 @@ class Solution:
             if not p or not q:
                 return False
             
-            if p.val==q.val and mirror(p.left,q.right) and mirror(p.right,q.left):
-                return True
+            return p.val==q.val and mirror(p.left,q.right) and mirror(p.right,q.left)
            
         
         return mirror(root,root)
