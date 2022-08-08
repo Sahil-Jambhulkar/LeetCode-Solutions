@@ -30,12 +30,10 @@ class Solution:
                 
                 if node.left:
                     q.append(node.left)
-                  
                 if node.right:
                     q.append(node.right)
                
                    
-            lenoflevel=len(level)
             for i in range(len(level)):
                 if i+1<len(level):
                     level[i].next=level[i+1]
