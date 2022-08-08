@@ -14,7 +14,6 @@ class Solution:
             return False
         
         def sameTree(p,q):
-            
             if not p and not q:
                 return True
 
@@ -22,9 +21,7 @@ class Solution:
                 return False
 
             if p.val==q.val and sameTree(p.left,q.left) and sameTree(p.right,q.right):
-                return True
-            
-         
+                return True  
         
         if sameTree(root,subRoot):
             return True
