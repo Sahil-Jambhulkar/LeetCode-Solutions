@@ -13,9 +13,7 @@ class Solution:
         if not root:
             return False
         
-        
-        
-        
+    
         def sameTree(p,q):
             
             if not p and not q:
