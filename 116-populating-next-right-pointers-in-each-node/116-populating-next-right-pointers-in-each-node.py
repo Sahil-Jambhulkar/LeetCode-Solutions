@@ -40,9 +40,7 @@ class Solution:
                 if i+1<len(level):
                     level[i].next=level[i+1]
                    
-                else:
-                    level[i].next=None
-                   
+                
                
         return root
                 
