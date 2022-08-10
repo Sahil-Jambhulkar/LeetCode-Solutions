@@ -6,26 +6,34 @@ class Solution:
         for ch in s:
             if ch in m:
                 m[ch]+=1
-               
             else:
                 m[ch]=1
                
-           
-        q=[]
+          
+        l=[[]  for i in range(len(s)+1)]
+
         
-        for ch in m:
-            q.append([-1*m[ch],ch])
+        for key,val in m.items():
+            l[val].append(key)
             
-        heapq.heapify(q)
-        ans=''
-        while(q):
-            freq,ch=heapq.heappop(q)
-            ans+=ch*(freq*-1)
-           
-        return ans
-            
-            
-           
         
+        
+        res=''
+        
+        for i in range(len(l)-1,-1,-1):
+            for ch in l[i]:
+                print(ch)
+                print(i)
+                print('*******')
+                res+=ch*i
+                if (len(res)==len(s)):
+                    return res
+                   
+                
+            
+            
+            
+            
+            
             
         
