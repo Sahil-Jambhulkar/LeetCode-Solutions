@@ -12,7 +12,7 @@ class Solution:
         def helper(l,r):
             
             if l>r:
-                return None
+                return 
             
             mid=(l+r)//2
             
@@ -21,9 +21,15 @@ class Solution:
             root.left=helper(l,mid-1)
             root.right=helper(mid+1,r)
             
-            
             return root
+            
+        
+        
+        
+        
         
         
         return helper(0,len(nums)-1)
+        
+        
         
