@@ -7,12 +7,39 @@
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         
+        
+        #This is iterative and inorder is type of DFS
+        #therefore we will use stack
+        
+        
+        stack=[]
         if not root:
-            return []
+            return stack
         
-        left=self.inorderTraversal(root.left)
-        right=self.inorderTraversal(root.right)
+        res=[]
+        while(stack or root):
+            
+            while(root):
+                stack.append(root)
+                root=root.left
+                
+            root=stack.pop()
+            res.append(root.val)
+            root=root.right
+           
+       
+        return res
+            
+            
+            
+            
+            
+                
+                
+                
+                
+            
+            
+            
         
-        
-        
-        return [*left,root.val,*right]
+       
