@@ -10,30 +10,27 @@ class Solution:
         
         self.res=-math.inf
         
-        
         def dfs(root):
-            
             
             if not root:
                 return 0
-            
             left=dfs(root.left)
             right=dfs(root.right)
             
             temp=max(root.val+max(left,right),root.val)
-            
             ans=max(temp,root.val+left+right)
             
             self.res=max(self.res,ans)
             
             return temp
        
-        
-        
+    
         dfs(root)
         return self.res
-        
-        
+            
+            
+            
+            
         
         
         
