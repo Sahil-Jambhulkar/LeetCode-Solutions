@@ -16,16 +16,12 @@ class Solution:
         for ch in m:
             q.append([-1*m[ch],ch])
             
-        print(q)  
-        
         heapq.heapify(q)
         ans=''
         while(q):
             freq,ch=heapq.heappop(q)
-            print(ch)
             ans+=ch*(freq*-1)
            
-        
         return ans
             
             
