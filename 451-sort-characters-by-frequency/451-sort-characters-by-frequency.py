@@ -8,7 +8,6 @@ class Solution:
                 m[ch]+=1
             else:
                 m[ch]=1
-               
           
         l=[[]  for i in range(len(s)+1)]
 
@@ -22,8 +21,6 @@ class Solution:
             for ch in l[i]:
                 res+=ch*i
                
-            
-            
         return res
                 
             
