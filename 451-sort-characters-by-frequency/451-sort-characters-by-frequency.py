@@ -16,24 +16,14 @@ class Solution:
         for key,val in m.items():
             l[val].append(key)
             
-        
-        
         res=''
         
         for i in range(len(l)-1,-1,-1):
             for ch in l[i]:
-                print(ch)
-                print(i)
-                print('*******')
                 res+=ch*i
-                if (len(res)==len(s)):
-                    return res
-                   
+               
+            
+            
+        return res
                 
             
-            
-            
-            
-            
-            
-        
