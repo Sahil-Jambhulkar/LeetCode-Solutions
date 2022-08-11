@@ -9,17 +9,20 @@ class Solution:
         
         
         
-        def valid(root,left,right):
+        
+        def valid(left,root,right):
             
             if not root:
                 return True
-            if not (left<root.val and root.val<right):
+            
+            if not(left<root.val and right>root.val):
                 return False
             
-            return valid(root.left,left,root.val) and valid(root.right,root.val,right)
+            return valid(left,root.left,root.val) and valid(root.val,root.right,right)
         
-        
-        return valid(root,-math.inf,math.inf)
-        
-        
+        return valid(-math.inf,root,math.inf)
+            
+            
+            
+            
         
