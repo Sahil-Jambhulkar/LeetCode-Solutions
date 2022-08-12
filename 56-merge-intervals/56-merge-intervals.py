@@ -13,6 +13,7 @@ class Solution:
                
             else:
                 res.append(intervals[i])
+       
         return res
             
         
