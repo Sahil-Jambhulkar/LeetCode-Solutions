@@ -6,15 +6,15 @@ class Solution:
         
         
         for i in range(len(speed)):
-            time.append(dist[i]/speed[i])
+            time.append(math.ceil(dist[i]/speed[i]))
         time.sort()
         
-        print(time)
-        for i in range(len(time)):
-            reached = (time[i] - i <= 0)
-            print(reached)
-            if reached : 
-                print('asdas')
-                return i 
+        
+        res=0
+        for minute in range(len(time)):
             
-        return len(time) 
+            if minute>=time[minute]:
+                return res
+            res+=1
+           
+        return res
