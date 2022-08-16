@@ -18,7 +18,7 @@ class Solution:
             return False
         
         
-        return (self.flipEquiv(root1.left,root2.left) and self.flipEquiv(root1.right,root2.right)) or (self.flipEquiv(root1.left,root2.right) and self.flipEquiv(root1.right,root2.left)) 
+        return (self.flipEquiv(root1.left,root2.left) or self.flipEquiv(root1.left,root2.right)) and (self.flipEquiv(root1.right,root2.left) or self.flipEquiv(root1.right,root2.right)) 
         
         
         
