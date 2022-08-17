@@ -8,12 +8,10 @@ class Solution:
         
         temp=None
         
-        
         while(head):
-            nextEle=head.next  #4
+            nextEle=head.next
             head.next=temp
             temp=head
             head=nextEle
-        
-        
-        return temp
+            
+        return temp 
