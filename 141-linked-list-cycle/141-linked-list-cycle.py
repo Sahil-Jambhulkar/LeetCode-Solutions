@@ -8,20 +8,19 @@ class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         
         
-        if not head:
-            return False
-        
         hire=head
-        rab=head.next
+        turtle=head
         
         
-        while(hire and rab and rab.next):
+        
+        while(turtle and hire and hire.next):
             
-            if hire==rab:
+            hire=hire.next.next
+            turtle=turtle.next
+            
+            while(hire==turtle):
                 return True
            
-            hire=hire.next
-            rab=rab.next.next
-        
         return False
         
+       
