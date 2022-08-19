@@ -18,10 +18,12 @@ class Solution:
         ptr=dummy=ListNode(0)
         
         dummy.next=head
-       
+        print(dummy.next.val)
+        print(ptr.next.val)
         
         
         while(first):
+            print('asdsad')
             first=first.next
             dummy=dummy.next
            
