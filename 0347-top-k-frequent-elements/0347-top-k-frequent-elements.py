@@ -23,8 +23,7 @@ class Solution:
                 if k>0:
                     res.append(ele)
                     k-=1
-                else:
-                    return res
+            
                     
         return res   
                 
