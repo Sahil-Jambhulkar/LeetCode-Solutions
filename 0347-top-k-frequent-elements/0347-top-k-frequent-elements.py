@@ -25,13 +25,9 @@ class Solution:
             for ele in elelist:
                 print()
                 if k>0:
-                    print('asdasd')
-                    print(ele)
                     res.append(ele)
-                    print(res)
                     k-=1
                 else:
-                    print('zxc')
                     return res
                     
                     
