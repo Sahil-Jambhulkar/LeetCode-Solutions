@@ -18,7 +18,6 @@ class Solution:
         
         
         for elelist in lst[-1:0:-1]:
-            print(elelist)
             for ele in elelist:
                 print()
                 if k>0:
