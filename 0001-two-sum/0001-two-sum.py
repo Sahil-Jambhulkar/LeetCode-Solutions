@@ -3,18 +3,9 @@ class Solution:
         
         m={}
         
-        
-        for index,number in enumerate(nums):
-            altNo=target-number
-            
-            if altNo in m:
-                return [m[altNo],index]
-            
-            else:
-                m[number] = index
+        for i in range(len(nums)):
+            for j in range(i+1,len(nums)):
                 
-            
-            
-            
-        
+                if nums[i]+nums[j]==target:
+                    return [i,j]
      
