@@ -11,13 +11,10 @@ class Solution:
                 
         lst=[[] for i in range(len(nums)+1)]   
         
-        
         for key,val in m.items():
             lst[val].append(key)
         
-        
         res=[]
-        
         
         
         for elelist in lst[-1:0:-1]:
@@ -29,7 +26,6 @@ class Solution:
                     k-=1
                 else:
                     return res
-                    
                     
         return res   
                 
