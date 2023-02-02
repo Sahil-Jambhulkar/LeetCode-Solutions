@@ -1,21 +1,20 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         
+        m={}
         
-        m = {}
         
         for index,number in enumerate(nums):
+            altNo=target-number
             
-            othernumber = target - number
-            
-            if othernumber in m:
-                return [m[othernumber],index]
+            if altNo in m:
+                return [m[altNo],index]
             
             else:
                 m[number] = index
                 
-                
+            
+            
             
         
-        
-        
+     
