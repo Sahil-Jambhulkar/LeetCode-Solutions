@@ -1,21 +1,21 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         
-        
-        stack=[]
-        
-        stack.append(prices[-1])
-        
+        l=0
+        r=0
         res=0
-        for i in range(len(prices)-2,-1,-1):
-            if stack[-1]<=prices[i]:
-                stack.append(prices[i])
+        nums=prices
+        
+        while(r<len(prices)):
+            
+            if nums[r]<nums[l]:
+                l=r
+                
             else:
-                ans=stack[-1]-prices[i]
-                res=max(res,ans)
-            
+                res=max(res,nums[r]-nums[l])
+                
+            r+=1
+        
+        
+        
         return res
-            
-        
-        
-       
