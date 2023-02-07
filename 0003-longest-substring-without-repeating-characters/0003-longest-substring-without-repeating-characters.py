@@ -3,18 +3,18 @@ class Solution:
         
         l = 0
         r = 0
-        
-        charSet = set()
+        charset=set()
         
         res=0
+        
         while(r<len(s)):
             
-            while(s[r] in charSet):
-                charSet.remove(s[l])
+            while(s[r] in charset):
+                charset.remove(s[l])
                 l+=1
             
-            charSet.add(s[r])
             res=max(res,r-l+1)
+            charset.add(s[r])
             r+=1
         
         return res
