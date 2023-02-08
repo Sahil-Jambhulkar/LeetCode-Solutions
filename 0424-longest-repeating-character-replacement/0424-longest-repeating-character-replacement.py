@@ -10,7 +10,7 @@ class Solution:
             
             m[s[r]] = 1 + m.get(s[r],0)
             
-            while(r-l+1 - max(m.values()) > k):
+            if(r-l+1 - max(m.values()) > k):
                 
                 m[s[l]]-=1
                 l+=1
